@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block image %}
+<img src="{% static 'images/header.jpg' %}">
+
+{% endblock image %}
+    
+{% block content %}
+<div>
+    {% for person in persons%}
+        <div class="petname">
+            <a href="{% url 'person_detail' person.id%}">
+                <h3>
+                    {{person.name|capfirst}}
+                </h3>
+            </a>
+            <p>DOB: {{person.dob}}</p>
+            <p>Email: {{person.email}}</p>
+            <p class="hidden">Job: {{person.job}}</p>
+            <p class="hidden">Company Name: {{person.company_name}}</p>
+            
+        </div>
+        <hr/>
+    {% endfor%}
+</div>
+{% endblock %}

@@ -1,0 +1,195 @@
+{% extends 'base.html' %}
+{% block content%}
+  {%if sent%}
+  <h1>Successfully registered!</h1>
+  {%else%}
+    <form action="."  method="post" >
+        {% csrf_token %}
+
+
+      <h3>GCC New Comer Form</h3>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <fieldset>
+            <input type="text" name="k_fname" maxlength="100" placeholder="Korean First Name" required autofocus >
+          </fieldset>
+        </div>
+
+        <div class="form-group col-md-3">
+          <fieldset>
+            <input name="k_lname" placeholder="Korean Last Name" type="text"   >
+          </fieldset>
+        </div>
+
+        <div class="form-group col-md-3">
+          <fieldset>
+            <input name="e_fname" placeholder="English First Name" type="text"   >
+          </fieldset>
+        </div>
+
+        <div class="form-group col-md-3">
+          <fieldset>
+            <input name="e_lname" placeholder="English Last Name" type="text"    >
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <fieldset>
+            <input name="email" placeholder="E-mail address" type="email"    >
+          </fieldset>
+        </div>
+        
+        <div class="form-group col-md-3">
+          <fieldset>
+            <input name="dob" type="text" id="datepicker" class="form-control" placeholder="Date Of Birth">
+          </fieldset>
+        </div>
+
+        <div class="form-group col-md-3">
+          <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="Male" name="gender" class="custom-control-input">
+              <label class="custom-control-label" for="Male">Male</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="Femal" name="gender" class="custom-control-input">
+              <label class="custom-control-label" for="Femal">Femal</label>
+            </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <fieldset>
+            <input name="job" placeholder="Job Title" type="text"  >
+          </fieldset>
+        </div>
+
+        <div class="form-group col-md-6">
+          <fieldset>
+            <input name="company_name" placeholder="Company Name" type="text" >
+          </fieldset>
+        </div>
+      </div>
+
+      <hr/>
+      <h4>Contact</h4>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <fieldset>
+            <input name="phone_num" placeholder="Phone Number" type="text"  >
+          </fieldset>
+        </div>
+        <div class="form-group col-md-6">
+          <fieldset>
+            <input name="home_num" placeholder="Home Number" type="text"  >
+          </fieldset>
+        </div>
+      </div>
+
+      <hr/>
+      <h4>Address</h4>
+      <div class="form-row">
+          <div class="form-group col-md-6">
+            <fieldset>
+              <input name="street1" placeholder="Street1" type="text"  >
+            </fieldset>
+          </div>
+          <div class="form-group col-md-6">
+            <fieldset>
+              <input name="street2" placeholder="Street2" type="text"  >
+            </fieldset>
+          </div>
+      </div>
+      <div class="form-row">
+          <div class="form-group col-md-6">
+            <fieldset>
+              <input name="city" placeholder="City" type="text" >
+            </fieldset>
+          </div>
+          <div class="form-group col-md-6">
+            <fieldset>
+              <input name="postal_code" placeholder="Postal Code" type="text"  >
+            </fieldset>
+          </div>
+      </div>
+
+      <hr/>
+      <h3>Church Info</h3>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <fieldset>
+            <input name="infant_baptized_church" type="text" class="form-control" placeholder="Infant Baptized Church">
+          </fieldset>
+        </div>
+        <div class="form-group col-md-3">
+          <fieldset>
+            <input name="infant_baptized_date" id="b1" type="text" class="form-control" placeholder="Infant Baptized Date">
+          </fieldset>
+        </div>
+        <div class="form-group col-md-3">
+          <fieldset>
+            <input name="baptized_church" type="text" class="form-control" placeholder="Baptized Church">
+          </fieldset>
+        </div>
+        <div class="form-group col-md-3">
+          <fieldset>
+            <input name="baptized_date" id="b2" type="text" class="form-control" placeholder="Baptized Date">
+          </fieldset>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <fieldset>
+            <input name="vehicle_license" type="text" class="form-control" placeholder="Vehicle License">
+          </fieldset>
+        </div>
+        <div class="form-group col-md-4">
+          <fieldset>
+            <input name="person_status" type="text" class="form-control" placeholder="Person Status">
+          </fieldset>
+        </div>
+        <div class="form-group col-md-4">
+          <fieldset>
+            <input name="position_type" type="text" class="form-control" placeholder="Position Type">
+          </fieldset>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <fieldset>
+            <input name="last_church_name" type="text" class="form-control" placeholder="Last Church Name">
+          </fieldset>
+        </div>
+        <div class="form-group col-md-3">
+          <fieldset>
+            <input name="last_church_leader" type="text" class="form-control" placeholder="Last Church Leader">
+          </fieldset>
+        </div>
+        <div class="form-group col-md-3">
+          <fieldset>
+            <input name="friends_in_church" type="text" class="form-control" placeholder="Friends In Church">
+          </fieldset>
+        </div>
+        <div class="form-group col-md-3">
+          <fieldset>
+            <input name="volunteer_experience" type="text" class="form-control" placeholder="Volunteer Experience">
+          </fieldset>
+        </div>
+      </div>
+
+      <fieldset>
+        <button name="submit" type="submit" id="contact-submit" value="Submit" >Submit</button>
+      </fieldset>
+
+    </form>
+  {%endif%}
+{%endblock%}
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    <h3>{{person.name|capfirst}}</h3>
+    <p>DOB: {{person.dob}}</p>
+    <p>Email: {{person.email}}</p>
+    <p>Job: {{person.job}}</p>
+    <p>Company Name: {{person.company_name}}</p>
+
+    <hr/>
+    <h3>Address</h3>
+    {% for address in person.address_set.all%}
+    <p>Street1: {{address.street1}}</p>
+    <p>Street2: {{address.street2}}</p>
+    <p >City: {{address.city}}</p>
+    <p >Postal Code: {{address.postal_code}}</p>
+    <hr/>
+    {% endfor %}
+
+    {% for contact in person.contact_set.all%}
+
+    <hr/>
+    <p>Phone Number: {{contact.phone_num}}</p>
+    <p>Home Number: {{contact.home_num}}</p>
+    {% endfor %}
+
+    <p>Submitted by: {{ pet.submitter }}</p>
+    <p>Submitted on: {{ pet.submission_date|date:"M d y"}}</p>
+
+    <p>{{pet.description}}</p>
+</div>
+
+
+{% endblock%}
