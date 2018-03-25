@@ -5,7 +5,7 @@ class Person(models.Model):
     GENDER_CHOICES = [('M', 'Male'), ('F', 'Female')]
     name = models.CharField(max_length=100)
     dob = models.CharField(max_length=30)
-    email = models.CharField(max_length=30, blank=True)
+    email = models.CharField(max_length=50, blank=True)
     job = models.CharField(max_length=30, blank=True)
     gender = models.CharField(choices=GENDER_CHOICES, max_length=1, blank=True)
     company_name = models.CharField(max_length=100)

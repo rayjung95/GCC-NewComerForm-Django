@@ -72,9 +72,6 @@ def register(request):
             friends_in_church=friends_in_church,volunteer_experience=volunteer_experience,person=save_person)
             save_personchurch.save()
             
-
-
-
             sent = True
 
             for x in form.cleaned_data:

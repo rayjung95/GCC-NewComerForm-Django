@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'wisdompets.urls'
+ROOT_URLCONF = 'NewCommerFormProject.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'wisdompets.wsgi.application'
+WSGI_APPLICATION = 'NewCommerFormProject.wsgi.application'
 
 
 # Database

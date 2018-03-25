@@ -4,7 +4,7 @@ from .models import Person, Contact,Address,PersonName,PersonChurch
 
 @admin.register(Person)
 class PersonAdmin(admin.ModelAdmin):
-    list_display = ['name','dob','email','job','gender','company_name']
+    list_display = ['name','dob','email','job','gender']
 
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
